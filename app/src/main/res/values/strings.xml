@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirebaseDemo</string>
+    <string name="new_user">New User</string>
+    <string name="firebase">Firebase</string>
+    <string name="retrieve_user">Retrieve User</string>
+    <string name="retrieved_user">Retrieved User Details</string>
+    <string name="goto_A2"><![CDATA[>]]></string>
+</resources>

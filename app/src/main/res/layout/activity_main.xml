@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.cyril.training.firebasedemo.MainActivity"
+    android:background="@color/colorPrimary">
+
+    <!--Button to create a new user-->
+    <Button
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_user"
+        android:id="@+id/button_for_new_Firebase_user"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="createNewUserButton"/>
+
+    <!--Button to retrieve the user details-->
+    <Button
+        android:visibility="gone"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/retrieve_user"
+        android:id="@+id/button_to_retrieve_user_from_Firebase_database"
+        android:onClick="retrieveUserButton"
+        android:layout_below="@+id/cardView_to_display_user_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <!--CardView to display user details contained in TextView-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_to_display_user_details"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@android:color/black">
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/imageView_to_show_download_from_FireBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="20dp"
+            android:shadowColor="@android:color/black"
+            android:shadowRadius="25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/retrieved_user"
+            android:id="@+id/textView_to_show_user1_data" />
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

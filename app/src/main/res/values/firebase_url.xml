@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_root_url">https://fir-demo-24ad3.firebaseio.com/</string>
+    <string name="firebase_storage_url">gs://fir-demo-24ad3.appspot.com</string>
+</resources>
