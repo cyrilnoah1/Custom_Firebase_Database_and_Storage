@@ -17,7 +17,5 @@ public class FirebaseSetupApplicationClass extends Application
     {
         super.onCreate();
         Firebase.setAndroidContext(this);
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
     }
 }
