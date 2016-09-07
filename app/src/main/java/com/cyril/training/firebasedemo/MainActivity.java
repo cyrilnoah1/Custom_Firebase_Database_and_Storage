@@ -130,9 +130,9 @@ public class MainActivity extends AppCompatActivity
         // Creating a new user to be uploaded.
         Users user1= new Users("Cyril"/*NAME*/,
                                 20/*AGE*/,
-                                "cnoah@rapidBizApps.com"/*E-MAIL*/,
-                                "Hyderabad"/*LOCATION*/,
-                                "rapidBizApps"/*WORKING COMPANY*/);
+                                "cnoah@xyz.com"/*E-MAIL*/,
+                                "Zyx"/*LOCATION*/,
+                                "Xyz"/*WORKING COMPANY*/);
 
         // Uploading the created user as an object to the provided URL (Gets stored in JSON format).
         // And, checking for success/failure of the upload.
