@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         // Creating a Firebase storage instance to download an Image.
         FirebaseStorage storage= FirebaseStorage.getInstance();
         // Providing the storage instance to StorageReference to obtain Firebase Storage URL.
-        //TODO- Add you Firebase Storage URL in the firebase_url.xml file.
+        //TODO- Add your Firebase Storage URL in the firebase_url.xml file.
         StorageReference reference= storage.getReferenceFromUrl(getString(R.string.firebase_storage_url));
 
         // Generating a random number to pick image for download.
