@@ -244,11 +244,9 @@ public class MainActivity extends AppCompatActivity
                 imageLoader.init(ImageLoaderConfiguration.createDefault(getApplicationContext()));
 
                 imageLoader.displayImage(uri.toString(), mDownloadedPictureImageView);
-            }
-        });
 
-        // Checking for failure while downloading the image.
-        mFirebaseStorageRefPath.getDownloadUrl().addOnFailureListener(new OnFailureListener() 
+            }
+        }).addOnFailureListener(new OnFailureListener()
         {
             @Override
             public void onFailure(@NonNull Exception e) 
