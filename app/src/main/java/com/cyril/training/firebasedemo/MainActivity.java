@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity
         //TODO- Add your Firebase root URL in the firebase_url.xml file.
         mFirebaseRoot = new Firebase(getString(R.string.firebase_root_url));
         // Creating a child root for the Firebase root URL.
+//        mNewUserReference = mFirebaseRoot.child("users");
         mNewUserReference = mFirebaseRoot.child("users");
 
         // Creating a Firebase storage instance to download an Image.
@@ -125,7 +126,9 @@ public class MainActivity extends AppCompatActivity
         * Pushing new values instead of creating a Child avoids collision,
         * as using push() each time generates child with a unique identity.
         */
+        //TODO- Use below code for push();
         Firebase pushUser1Reference= mNewUserReference.push();
+//        Firebase pushUser1Reference= mNewUserReference.child("details");
 
         // Creating a new user to be uploaded.
         Users user1= new Users("Cyril"/*NAME*/,
@@ -162,6 +165,7 @@ public class MainActivity extends AppCompatActivity
 
         // Storing the unique identity created by push() in an ArrayList
         // to later retrieve data.
+        //TODO- Use below code for push();
         mFirebasePushKey.add(pushUser1Reference.getKey());
 
         // Hiding the mNewUserButton button.
@@ -176,7 +180,7 @@ public class MainActivity extends AppCompatActivity
     {
         // Adding valueEventListener to retrieve data asynchronously from the given Firebase URL.
         // Passing the unique ID to child(), to retrieve data.
-        mNewUserReference.child(mFirebasePushKey.get(0)).addValueEventListener(new ValueEventListener()
+        mNewUserReference.child( /*"details"*/ mFirebasePushKey.get(0)).addValueEventListener(new ValueEventListener()
         {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
