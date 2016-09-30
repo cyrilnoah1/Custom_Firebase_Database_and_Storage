@@ -9,12 +9,10 @@ import com.firebase.client.Firebase;
 /**
  * Firebase start-up class.
  */
-public class FirebaseSetupApplicationClass extends Application
-{
+public class FirebaseSetupApplicationClass extends Application {
     //Setting up Firebase at the Application's start.
     @Override
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
         Firebase.setAndroidContext(this);
     }
